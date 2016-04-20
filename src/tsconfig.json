@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "es6",
         "module": "commonjs",
-        "outDir": "../dist",
+        "outDir": "../build",
         "declaration": false,
         "noImplicitAny": true,
         "removeComments": false,
@@ -25,7 +25,7 @@
         "placeOpenBraceOnNewLineForFunctions": true,
         "placeOpenBraceOnNewLineForControlBlocks": true
     },
-    "compileOnSave": true,
+    "compileOnSave": false,
     "filesGlob": [
         "./**/*.ts",
         "!./node_modules/**/*.ts",
@@ -34,7 +34,7 @@
     ],
     "exclude": [
         "../node_modules",
-        "../typings"
+        "./typings"
     ],
     "files": [
         "./index.ts"

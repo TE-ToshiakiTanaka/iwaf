@@ -1,8 +1,18 @@
 {
   "name": "iwaf",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron-builder": "^3.17.1",
+    "electron-packager": "^7.0.1",
+    "electron-prebuilt": "^0.37.8",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.4",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,11 +20,6 @@
     "type": "git",
     "url": "git@github:TE-ToshiakiTanaka/iwaf.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^1.8.10",
-    "typings": "^0.8.1"
-  }
+  "author": "Toshiaki.Tanaka",
+  "license": "ISC"
 }
