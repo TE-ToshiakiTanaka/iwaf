@@ -4,14 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "repository": {
     "type": "git",
     "url": "git@github:TE-ToshiakiTanaka/iwaf.git"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,6 +17,8 @@
     "electron-builder": "^3.6.1",
     "electron-packager": "^7.0.0",
     "electron-prebuilt": "^0.37.6",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.0",
     "typescript": "^1.8.10",
     "typings": "^0.8.1"
   }
