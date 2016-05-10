@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "del": "^2.2.0",
     "electron-builder": "^3.17.1",
     "electron-packager": "^7.0.1",
     "electron-prebuilt": "^0.37.8",
