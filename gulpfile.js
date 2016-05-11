@@ -27,6 +27,15 @@ gulp.task( 'copy', ['build'], function() {
     .pipe( gulp.dest( 'build/html' ) );
 } );
 
+gulp.task( 'flash', ['build'], function() {
+    return gulp.src(
+        [ 'plugin/**' ],
+        { base: 'plugin' }
+    )
+    .pipe( gulp.dest( 'build/plugin' ) );
+} );
+
+
 gulp.task('package:darwin', ['build'], function (done) {
     packager({
         dir: 'build',
@@ -54,4 +63,4 @@ gulp.task('package:win32', ['build'], function (done) {
 });
 
 gulp.task("package", ["package:darwin", "package:win32"])
-gulp.task("default", ["build", "copy"]);
+gulp.task("default", ["build", "copy", "flash"]);
