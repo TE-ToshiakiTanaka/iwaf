@@ -26,7 +26,7 @@ class IwafApplication {
             titleBarStyle: 'hidden'
         });
 
-        this.mainWindow.loadURL('http://google.com');
+        this.mainWindow.loadURL('file://' + __dirname + '/html/index.html');
 
         this.mainWindow.on('closed', () => {
             this.mainWindow = null;

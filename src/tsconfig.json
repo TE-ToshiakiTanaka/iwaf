@@ -37,7 +37,7 @@
         "./typings"
     ],
     "files": [
-        "./index.ts"
+        "./app.ts"
     ],
     "atom": {
         "rewriteTsconfig": true
