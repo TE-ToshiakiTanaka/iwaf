@@ -16,6 +16,7 @@ gulp.task( 'build', function () {
 gulp.task( 'clean', function () {
     del([
         "build",
+        "release"
     ]);
 });
 
@@ -35,8 +36,15 @@ gulp.task( 'flash', ['build'], function() {
     .pipe( gulp.dest( 'build/plugin' ) );
 } );
 
+gulp.task( 'config', ['build'], function() {
+    return gulp.src(
+        [ 'package.json' ],
+        { base: '.' }
+    )
+    .pipe( gulp.dest( 'build' ) );
+} );
 
-gulp.task('package:darwin', ['build'], function (done) {
+gulp.task('package:darwin', ['config'], function (done) {
     packager({
         dir: 'build',
         out: 'release/darwin',
@@ -49,10 +57,10 @@ gulp.task('package:darwin', ['build'], function (done) {
     });
 });
 
-gulp.task('package:win32', ['build'], function (done) {
+gulp.task('package:win32', ['config'], function (done) {
     packager({
         dir: 'build',
-        out: 'release/win32',
+        out: 'release/win32-x64',
         name: 'Iwaf',
         arch: 'x64',
         platform: 'win32',
@@ -62,5 +70,6 @@ gulp.task('package:win32', ['build'], function (done) {
     });
 });
 
-gulp.task("package", ["package:darwin", "package:win32"])
-gulp.task("default", ["build", "copy", "flash"]);
+gulp.task("package", ["package:darwin", "package:win32"]);
+gulp.task("default", ["build", "copy", "flash", "config"]);
+gulp.task("all", ["clean", "build", "copy", "flash", "package"]);

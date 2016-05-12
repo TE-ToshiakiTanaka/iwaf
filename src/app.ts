@@ -5,8 +5,9 @@ const BrowserWindow: typeof Electron.BrowserWindow = electron.BrowserWindow;
 const app = require('app');
 const path = require('path');
 
-//app.commandLine.appendSwitch('ppapi-flash-path', path.join(__dirname, 'plugin', 'Pepperflash', 'pepflashplayer.dll'));
-app.commandLine.appendSwitch('ppapi-flash-path', path.join(__dirname, 'pepflashplayer.dll'));
+require('crash-reporter').start();
+
+app.commandLine.appendSwitch('ppapi-flash-path', path.join(__dirname, 'plugin', 'Pepperflash', 'pepflashplayer.dll'));
 app.commandLine.appendSwitch('ppapi-flash-version', '21.0.0.216');
 
 class IwafApplication {
@@ -25,15 +26,17 @@ class IwafApplication {
 
     onReady() {
         this.mainWindow = new BrowserWindow({
-            width: 800,
-            height: 502,
+            width: 1600,
+            height: 800,
             frame: true,
             transparent: false,
             resizable: false,
+            webPreferences: {
+                'plugins': true
+            }
         });
 
         this.mainWindow.loadURL('file://' + __dirname + '/html/index.html');
-        //this.mainWindow.loadURL('http://www.adobe.com/software/flash/about/');
         this.mainWindow.on('closed', () => {
             this.mainWindow = null;
         });
