@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "selenium-webdriver": "^2.53.2"
+  },
   "devDependencies": {
     "del": "^2.2.0",
     "electron-builder": "^3.17.1",
@@ -13,6 +15,7 @@
     "gulp-typescript": "^2.13.4",
     "selenium-webdriver": "^2.53.2",
     "typescript": "^1.8.10",
+    "typescript-require": "^0.2.9",
     "typings": "^0.8.1"
   },
   "scripts": {
