@@ -24,7 +24,7 @@ var flashPath = path.join(__dirname, 'plugin', process.platform, pepperPluginDat
 app.commandLine.appendSwitch('ppapi-flash-path', flashPath);
 app.commandLine.appendSwitch('ppapi-flash-version', flashPlugin[process.platform].version);
 
-class KirApplication {
+class Izarra {
     mainWindow: Electron.BrowserWindow = null;
 
     constructor(public app: Electron.App) {
@@ -58,4 +58,4 @@ class KirApplication {
     }
 }
 
-const kir = new KirApplication(app);
+const izarra = new Izarra(app);
