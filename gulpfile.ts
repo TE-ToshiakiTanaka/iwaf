@@ -1,6 +1,7 @@
 /// <reference path="./typings/main.d.ts" />
 
-import gulp = require('gulp');
+import * as gulp from 'gulp';
+
 import ts = require('gulp-typescript');
 
 var kir = ts.createProject('src/kir/tsconfig.json', {

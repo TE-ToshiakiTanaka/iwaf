@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "es6",
         "module": "commonjs",
-        "outDir": "../build/kir",
+        "outDir": "../build/rose",
         "declaration": false,
         "noImplicitAny": true,
         "removeComments": false,
