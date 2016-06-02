@@ -1,0 +1,6 @@
+[submodule "izarra"]
+	path = izarra
+	url = git@github.com:TE-ToshiakiTanaka/izarra.git
+[submodule "vermouth"]
+	path = vermouth
+	url = git@github.com:TE-ToshiakiTanaka/vermouth.git
